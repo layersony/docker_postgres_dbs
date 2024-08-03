@@ -1,17 +1,17 @@
 1. To Create a New Database
 
 ``` bash 
-docker exec -it postgres /docker-entrypoint-initdb.d/init-db.sh {new database name}
+make create-db DB_NAME=newdb
 ```
 
 2. To Create a New Database
 
 ``` bash 
-docker exec -it postgres /docker-entrypoint-initdb.d/delete-db.sh {database name}
+make delete-db DB_NAME=olddb
 ```
 
 3. To List all databases
 
 ``` bash 
-docker exec -it postgres /docker-entrypoint-initdb.d/list-dbs.sh
+make list-dbs
 ```
